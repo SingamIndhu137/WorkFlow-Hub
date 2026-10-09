@@ -1,7 +1,6 @@
-```yaml
-name: WorkFlow Hub CI/CD
 
-on:
+name: WorkFlow Hub CI/CD
+'on':
   push:
     branches:
       - main
@@ -9,7 +8,6 @@ on:
 jobs:
   docker-build-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -36,4 +34,3 @@ jobs:
           context: ./frontend
           push: true
           tags: singamindhu137/workflow-hub-frontend:latest
-```
